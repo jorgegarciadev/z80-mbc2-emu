@@ -251,7 +251,7 @@ impl Machine for Mbc2Machine {
 
             if self.con.status() {
                 let mut ch = self.con.read();
-                if ch == 3 { // Control C
+                if ch == 17 { // Control Q
                     self.quit = true;
                 } else if ch == 127 { // Backspace
                     ch = 8
